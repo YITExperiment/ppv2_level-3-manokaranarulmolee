@@ -12,17 +12,17 @@ def draw_shape(size, angle , shift ,shape):
         next_shape = 'square'
     elif shape == 'square':
         for i in range (4):
-            turtle.forward(size+10)
+            turtle.forward(size-2)
             turtle.left(90)
         next_shape = 'circle'
     turtle.right(angle)
     turtle.forward(shift)
-    draw_shape( 10,90,4,'square')
+    draw_shape(size + 5,angle +4,shift + 1,next_shape)
 
 turtle.bgcolor('black')
 turtle.speed('fast')
 turtle.pensize(4)
-draw_shape(40,0,5,'circle')
+draw_shape(30,0,5,'circle')
 
 
     
